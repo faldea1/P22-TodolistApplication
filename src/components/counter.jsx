@@ -1,9 +1,25 @@
 import React from "react";
-import { } from 'react-icons/fa';
+import { FaHourglassHalf } from 'react-icons/fa';
 
-const TheCounter = () => {
+const TheCounter = (props) => {
 	return (
-		<div>dsd</div>
+
+	<div className="theTimer container-fluid justify-content-center">
+			<div className="chronometer"><FaHourglassHalf /></div>
+			<div className="sixdigits">0</div>
+			<div className="fivedigits">0</div>
+			<div className="fourdigits">0</div>
+			<div className="threedigits">0</div>
+			<div className="twodigits">0</div>
+			<div className="onedigit">0</div>
+		</div>
+
+
+
+
+
+
+
 	);
 };
 

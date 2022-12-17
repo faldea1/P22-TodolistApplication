@@ -1,0 +1,28 @@
+body{
+    background-color: black;
+}
+
+
+
+.theTimer {
+    display:flex;
+    background-color: black;
+    color: lightgreen;
+    padding: 20px;
+    font-size: 85px;
+
+}
+
+.chronometer{
+    font-size: 70px;
+}
+
+.onedigit, .twodigits, .threedigits, .fourdigits, .fivedigits, .sixdigits {
+    
+    padding-left: 20px;
+}
+
+.chronometer{
+    padding-top: 5px;
+    padding-right: 15px;
+}
