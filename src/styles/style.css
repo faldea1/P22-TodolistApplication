@@ -1,7 +1,7 @@
+
 body{
     background-color: black;
 }
-
 
 
 .theTimer {
@@ -13,16 +13,20 @@ body{
 
 }
 
+
 .chronometer{
     font-size: 70px;
 }
+
 
 .onedigit, .twodigits, .threedigits, .fourdigits, .fivedigits, .sixdigits {
     
     padding-left: 20px;
 }
 
+
 .chronometer{
     padding-top: 5px;
     padding-right: 15px;
 }
+

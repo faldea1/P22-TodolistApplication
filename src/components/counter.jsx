@@ -6,20 +6,13 @@ const TheCounter = (props) => {
 
 	<div className="theTimer container-fluid justify-content-center">
 			<div className="chronometer"><FaHourglassHalf /></div>
-			<div className="sixdigits">0</div>
-			<div className="fivedigits">0</div>
-			<div className="fourdigits">0</div>
-			<div className="threedigits">0</div>
-			<div className="twodigits">0</div>
-			<div className="onedigit">0</div>
+			<div className="sixdigits">{props.digitSix % 10}</div>
+			<div className="fivedigits">{props.digitFive % 10}</div>
+			<div className="fourdigits">{props.digitFour % 10}</div>
+			<div className="threedigits">{props.digitThree % 10}</div>
+			<div className="twodigits">{props.digitTwo % 10}</div>
+			<div className="onedigit">{props.digitOne % 10}</div>
 		</div>
-
-
-
-
-
-
-
 	);
 };
 
