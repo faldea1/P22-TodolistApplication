@@ -1,9 +1,9 @@
 
 import React from "react";
-import { FaStepBackward, FaPlay, FaStepForward } from 'react-icons/fa';
+import { FaStepBackward, FaPlay, FaPause, FaStepForward } from 'react-icons/fa';
 
 
-const PlayTools = ({selectedSong, SongPlaying, setSongPlaying}) => {
+const PlayTools = ({selectedSong, SongPlaying, setSongPlaying, CurrentSong, setCurrentSong}) => {
 
 	const PlayPause = () => {
 
@@ -14,11 +14,17 @@ const PlayTools = ({selectedSong, SongPlaying, setSongPlaying}) => {
 	return (
 		<div className="playerContainer">
 			<div className="songTitle">
-				<p>Mario World Songs</p>
+				<h1>Mario World Songs!</h1>
+				<h3>{CurrentSong.name}</h3>
+			</div>
+			<div className="songTimmer">
+				<div className="songTimerBar">
+					<div className="momentBar" style={{width:`${CurrentSong.moment+"%"}`}}></div>
+				</div>
 			</div>
 			<div className="controlButtons">
 				<FaStepBackward className="buttonBack" />
-				<FaPlay className="buttonPlayStop" onClick={PlayPause} />
+				{SongPlaying ? <FaPause className="buttonPlayStop" onClick={PlayPause} /> : <FaPlay className="buttonPlayStop" onClick={PlayPause} />}
 				<FaStepForward className="buttonFwd" />
 			</div>
 		</div>

@@ -24,11 +24,20 @@ const PlayList = () => {
 	}, [SongPlaying]);
 
 
+	//Barra de tiempo:
+	const instantPlaying = () => {
+
+		const duration = selectedSong.current.duration; //duracion total de la canción.
+		const actualtime = selectedSong.current.currentTime; //segundo de la canción.
+
+		setCurrentSong({... CurrentSong, "moment": actualtime/duration * 100, "length": duration });
+
+	};
 
 	return (
 	<div className="songsPlayer">
-		<audio src="https://assets.breatheco.de/apis/sound/files/mario/songs/castle.mp3" ref={selectedSong} />
-		<PlayTools songs={Songs} setSongs={setSongs} SongPlaying={SongPlaying} setSongPlaying={setSongPlaying} selectedSong={selectedSong} />
+		<audio src={CurrentSong.url} ref={selectedSong} onTimeUpdate={instantPlaying} />
+		<PlayTools songs={Songs} setSongs={setSongs} SongPlaying={SongPlaying} setSongPlaying={setSongPlaying} selectedSong={selectedSong} CurrentSong={CurrentSong} setCurrentSong={setCurrentSong} />
 	</div>
 	);
 };
