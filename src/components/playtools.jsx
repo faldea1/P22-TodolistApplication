@@ -1,12 +1,27 @@
 
 import React from "react";
-import { FaHourglassHalf, FaHourglass } from 'react-icons/fa';
+import { FaStepBackward, FaPlay, FaStepForward } from 'react-icons/fa';
 
 
-const PlayTools = () => {
+const PlayTools = ({selectedSong, SongPlaying, setSongPlaying}) => {
+
+	const PlayPause = () => {
+
+		setSongPlaying(!SongPlaying);
+
+	};
+
 	return (
-     <div>tools</div>
-     
+		<div className="playerContainer">
+			<div className="songTitle">
+				<p>Mario World Songs</p>
+			</div>
+			<div className="controlButtons">
+				<FaStepBackward className="buttonBack" />
+				<FaPlay className="buttonPlayStop" onClick={PlayPause} />
+				<FaStepForward className="buttonFwd" />
+			</div>
+		</div>
 	);
 };
 
