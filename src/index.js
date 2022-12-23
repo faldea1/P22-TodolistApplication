@@ -12,25 +12,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import "./styles/style.css"
 
 //COMPONENT VIEW
-import TheCounter from "./components/counter.jsx"
+import PlayList from "./components/playlist.jsx"
 
-let counter = 0;
-setInterval(function(){
-    const six = Math.floor(counter/10000);
-    const five = Math.floor(counter/10000);
-    const four = Math.floor(counter/1000);
-    const three = Math.floor(counter/100);
-    const two = Math.floor(counter/10);
-    const one = Math.floor(counter/1);
-    console.log(six, five, four, three, two, one);
-    counter= counter + 1;
-
-    
-ReactDOM.createRoot(document.querySelector('#root')).render(<TheCounter digitOne={one} digitTwo={two} digitThree={three} digitFour={four} digitFive={five} digitSix={six} />);
-
-
-},1000);
-
-
-// Duda a resolver - Contador funciona visualmente, pero render arroja warning en console.
+ReactDOM.createRoot(document.querySelector('#root')).render(<PlayList />);
 
