@@ -1,6 +1,7 @@
 
 import React, { useRef } from "react";
 import { FaStepBackward, FaPlay, FaPause, FaStepForward } from 'react-icons/fa';
+import MarioSongs from "./audios.jsx";
 
 
 const PlayTools = ({selectedSong, SongPlaying, setSongPlaying, CurrentSong, setCurrentSong, Songs}) => {
@@ -56,6 +57,45 @@ const PlayTools = ({selectedSong, SongPlaying, setSongPlaying, CurrentSong, setC
 	};
 
 
+	const MCClick = () => {
+
+		setCurrentSong(Songs[0]);
+
+		setSongPlaying(!SongPlaying);
+
+
+	selectedSong.current.currentTime = 0; 
+
+};
+
+
+
+	const MSClick = () => {
+
+			setCurrentSong(Songs[1]);
+
+			setSongPlaying(!SongPlaying);
+
+
+		selectedSong.current.currentTime = 0; 
+
+	};
+
+
+	const MOClick = () => {
+
+		setCurrentSong(Songs[2]);
+
+		setSongPlaying(!SongPlaying);
+
+
+	selectedSong.current.currentTime = 0; 
+
+};
+
+
+
+
 
 
 
@@ -68,6 +108,30 @@ const PlayTools = ({selectedSong, SongPlaying, setSongPlaying, CurrentSong, setC
 				<h1>Mario World Songs!</h1>
 				<h3>{CurrentSong.name}</h3>
 			</div>
+		<div className="songsList">
+		<table class="table table-striped table-dark">
+  			<thead>
+    			<tr>
+      				<th scope="col">#</th>
+      				<th scope="col">Song</th>
+    			</tr>
+  			</thead>
+  			<tbody>
+    			<tr className="MC" onClick={MCClick}>
+      				<th scope="row">1</th>
+      				<td>Mario Castle</td>
+				</tr>
+				<tr className="MS" onClick={MSClick}>
+ 					<th scope="row">2</th>
+					<td>Mario Star</td>
+				</tr>
+				<tr className="MO" onClick={MOClick}>
+    				<th scope="row">3</th>
+  					<td>Mario Overworld</td>
+    			</tr>
+			</tbody>
+		</table>
+		</div>
 			<div className="songTimmer">
 				<div className="songTimerBar" onClick={SongTimer} ref={clickBar}>
 					<div className="momentBar" style={{width:`${CurrentSong.moment+"%"}`}}></div>
