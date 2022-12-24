@@ -37,7 +37,7 @@ const PlayList = () => {
 	return (
 	<div className="songsPlayer">
 		<audio src={CurrentSong.url} ref={selectedSong} onTimeUpdate={instantPlaying} />
-		<PlayTools songs={Songs} setSongs={setSongs} SongPlaying={SongPlaying} setSongPlaying={setSongPlaying} selectedSong={selectedSong} CurrentSong={CurrentSong} setCurrentSong={setCurrentSong} />
+		<PlayTools Songs={Songs} setSongs={setSongs} SongPlaying={SongPlaying} setSongPlaying={setSongPlaying} selectedSong={selectedSong} CurrentSong={CurrentSong} setCurrentSong={setCurrentSong} />
 	</div>
 	);
 };
