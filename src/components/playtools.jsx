@@ -64,6 +64,8 @@ const PlayTools = ({selectedSong, SongPlaying, setSongPlaying, CurrentSong, setC
 		setSongPlaying(!SongPlaying);
 
 
+
+
 	selectedSong.current.currentTime = 0; 
 
 };
@@ -113,7 +115,7 @@ const PlayTools = ({selectedSong, SongPlaying, setSongPlaying, CurrentSong, setC
   			<thead>
     			<tr>
       				<th scope="col">#</th>
-      				<th scope="col">Song</th>
+      				<th scope="col">Songs</th>
     			</tr>
   			</thead>
   			<tbody>
