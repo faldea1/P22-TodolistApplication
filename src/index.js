@@ -12,7 +12,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import "./styles/style.css"
 
 //COMPONENT VIEW
-import PlayList from "./components/playlist.jsx"
+import ToDefine from "./components/todefine.jsx"
 
-ReactDOM.createRoot(document.querySelector('#root')).render(<PlayList />);
+ReactDOM.createRoot(document.querySelector('#root')).render(<ToDefine />);
 
