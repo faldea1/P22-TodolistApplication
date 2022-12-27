@@ -15,6 +15,7 @@ input{
     border: none;
     width: 100%;
     background-color: black;
+    color:white;
 }
 
 
@@ -27,12 +28,25 @@ ul li{
 
 ul{
     padding: 0;
+    margin-bottom: 0;
+}
+
+.MyActionsNumb{
+    font-size:medium;
+    color: yellow;
 }
 
 
-span{
+.mytitleicon{
     padding-left: 10px;
     color:yellow;
 }
+
+span{
+    padding-left: 10px;
+    color:grey;
+}
+
+
 
 
