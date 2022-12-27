@@ -15,9 +15,9 @@ const MytoDoList = () => {
 		<h1>My To Do List  <span className="mytitleicon"><FaTasks /></span></h1>
 		<ul>
 			<li><input type="text" onChange={(e) => setInputContent(e.target.value)} value={inputContent} onKeyDown={(e) => e.key === "Enter" ? setlistoftodos(listoftodos.concat(inputContent)) : null} onKeyUp={(e) => e.key === "Enter" ? setInputContent("") : null} placeholder="Add a morning action to start a good day"></input></li> 
-			{listoftodos.map((t) => (<li>Make the bed<span><FaTrash /></span></li>))}
+			{listoftodos.map((task, index) => (<li>{task}<span><FaTrash onClick={() => setlistoftodos(listoftodos.filter((t, currentIndex) => index != currentIndex))} /></span></li>))}
 		</ul>
-		<div className="MyActionsNumb">Number of Actions</div>
+		<div className="MyActionsNumb">Number of Tasks: {listoftodos.length}</div>
 	</div>
 	);
 };
