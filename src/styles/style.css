@@ -3,3 +3,36 @@ body{
     background-color: black;
     color: white;
 }
+
+h1{
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input{
+    border: none;
+    width: 100%;
+    background-color: black;
+}
+
+
+
+ul li{
+    padding: 7px;
+    list-style: none;
+    border:1px solid white;
+}
+
+ul{
+    padding: 0;
+}
+
+
+span{
+    padding-left: 10px;
+    color:yellow;
+}
+
+
